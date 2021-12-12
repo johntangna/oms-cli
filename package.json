@@ -1,0 +1,34 @@
+{
+    "name": "oms-cli",
+    "version": "1.0.0",
+    "description": "onmouse/cli",
+    "main": "index.ts",
+    "scripts": {
+        "babel": "babel-node src/index.ts",
+        "test": "jest"
+    },
+    "keywords": [
+        "oms/cli"
+    ],
+    "author": "wangsitu",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^5.0.0",
+        "commander": "^8.3.0",
+        "inquirer": "^8.2.0",
+        "typescript": "^4.5.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/node": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/preset-typescript": "^7.16.0",
+        "@types/jest": "^27.0.3",
+        "@types/node": "^16.11.12",
+        "babel-cli": "^6.26.0",
+        "babel-jest": "^27.4.4",
+        "babel-preset-es2015": "^6.24.1",
+        "jest": "^27.4.4",
+        "ts-jest": "^27.1.1"
+    }
+}
