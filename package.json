@@ -1,6 +1,6 @@
 {
-    "name": "oms-cli",
-    "version": "1.0.0",
+    "name": "onmouse-cli",
+    "version": "1.0.4",
     "description": "onmouse/cli",
     "main": "index.ts",
     "scripts": {
@@ -8,13 +8,17 @@
         "test": "jest"
     },
     "keywords": [
-        "oms/cli"
+        "onmouse/cli"
     ],
     "author": "wangsitu",
     "license": "ISC",
+    "bin": {
+        "onmouse": "./src/index.ts"
+    },
     "dependencies": {
         "chalk": "^5.0.0",
         "commander": "^8.3.0",
+        "download-git-repo": "^3.0.2",
         "inquirer": "^8.2.0",
         "typescript": "^4.5.3"
     },

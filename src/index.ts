@@ -1,3 +1,8 @@
 import { program } from "commander";
-
-console.info(1)
+import { version } from "../package.json";
+import { getAllFrameworList } from "../utils/framework";
+program.version(version, "-V, --version", "print out the current version");
+program
+  .command("-ls")
+  .description("all framework can use")
+  .action(getAllFrameworList);
