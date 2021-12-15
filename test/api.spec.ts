@@ -1,5 +1,7 @@
+import { getAllFrameworList } from "../utils/framework";
 describe("api", () => {
-  test('testApi', () => {
-    expect(1).toEqual(1)
-  })
-})
+  test("testApi", () => {
+    console.info = jest.fn();
+    getAllFrameworList();
+  });
+});

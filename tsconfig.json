@@ -1,64 +1,20 @@
 {
   "compilerOptions": {
-    "suppressImplicitAnyIndexErrors": true,
-    "baseUrl": "./",
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2018",
     "moduleResolution": "node",
     "strict": true,
-    "skipLibCheck": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "vite/client",
-      "node",
-      "jest"
-    ],
-
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "api/*": [
-        "src/api/*"
-      ],
-      "utils/*": [
-        "src/common/*"
-      ],
-      "components/*": [
-        "src/components/*"
-      ],
-      "icons/*": [
-        "src/icons/*"
-      ],
-      "plugins/*": [
-        "src/plugins/*"
-      ],
-      "store/*": [
-        "src/store/*"
-      ],
-      "views/*": [
-        "src/views/*"
-      ],
-    }
+    "declaration": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "useUnknownInCatchVariables": false,
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/**/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx",
-    "src/**/**/*.ts",
+    "test/**/*.ts",
+    "config/*.ts",
     "utils/**/*.ts"
-, "tests/test.js", "tests/test.js"  ],
+  ],
   "exclude": [
     "node_modules",
     "dist"
