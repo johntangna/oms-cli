@@ -5,7 +5,7 @@ import * as handlebars from "handlebars";
 import * as inquirer from "inquirer";
 import * as ora from "ora";
 import * as shell from "shelljs";
-import * as download from "download-git-repo";
+import download from "download-git-repo";
 import { config } from "../config/index";
 /**
  * 框架类型
@@ -102,8 +102,9 @@ function downloadGitRepo(answers: any) {
   const { projectTemplate, projectName, version } = answers;
   console.log(chalk.blue("正在拉取" + projectTemplate + "项目模板"));
   spinner.start();
+  let index = config.registrydownload.findIndex((cb) => cb.name == projectName);
   download(
-    config.registrydownload[projectTemplate].download,
+    config.registrydownload[index].download,
     projectName,
     { clone: true },
     function (err: any) {

@@ -8,7 +8,7 @@ var handlebars = require("handlebars");
 var inquirer = require("inquirer");
 var ora = require("ora");
 var shell = require("shelljs");
-var download = require("download-git-repo");
+var download_git_repo_1 = require("download-git-repo");
 var index_1 = require("../config/index");
 /**
  * 框架数组
@@ -94,7 +94,8 @@ function downloadGitRepo(answers) {
     var projectTemplate = answers.projectTemplate, projectName = answers.projectName, version = answers.version;
     console.log(chalk.blue("正在拉取" + projectTemplate + "项目模板"));
     spinner.start();
-    download(index_1.config.registrydownload[projectTemplate].download, projectName, { clone: true }, function (err) {
+    var index = index_1.config.registrydownload.findIndex(function (cb) { return cb.name == projectName; });
+    (0, download_git_repo_1["default"])(index_1.config.registrydownload[index].download, projectName, { clone: true }, function (err) {
         if (err) {
             // 下载失败
             spinner.fail(chalk.bgRed("下载失败"));
